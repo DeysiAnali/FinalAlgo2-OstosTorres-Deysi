@@ -8,6 +8,6 @@ package Modelo;
  *
  * @author Deysi
  */
-public class Detalle {
+public class Detalle implements Serializable{
     
 }

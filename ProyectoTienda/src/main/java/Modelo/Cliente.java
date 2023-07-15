@@ -4,10 +4,28 @@
  */
 package Modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Deysi
  */
-public class Cliente {
+public class Cliente extends Persona implements Serializable {
+    private int celular;
+    private float dinero;
+
+    public Cliente(String nombre, String paterno, String materno, String nacimiento, String numDocumento) {
+        super(nombre, paterno, materno, nacimiento, numDocumento);
+    }
+   
+    public boolean pagar() {
+       
+        return true;
+    }
+
+    public boolean recargarDinero() {
+    
+        return true;
+    }
     
 }

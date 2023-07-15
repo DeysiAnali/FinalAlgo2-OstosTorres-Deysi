@@ -41,16 +41,18 @@ public class Tienda implements Serializable{
          
    public Producto[] buscarProductoPorCategoria(Categoria categoria) {
       
-   
+    return   ;
    }
    
    public Producto[] buscarProductoPorNombre(String nombre) {
        
-       
+       return   ; 
    }
    
     public Persona autenticar(String email, String password) {
         
+   
+     return   ;
     }
    
    

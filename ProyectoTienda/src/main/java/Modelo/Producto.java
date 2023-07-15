@@ -11,31 +11,50 @@ import java.io.Serializable;
  * @author Deysi
  */
 public class Producto implements Serializable{
-     private String nombre;
-    private double precio;
-    private Categoria categoria;
+     
+    private float precio;
+    private String nombre;
     private int stock;
-            
-     public Producto(String nombre, double precio, Categoria categoria, int stock) {
-        this.nombre = nombre;
+    private String marca;
+    private Categoria categoria;
+
+    public Producto(float precio, String nombre, int stock, String marca, Categoria categoria) {
         this.precio = precio;
-        this.categoria = categoria;
+        this.nombre = nombre;
         this.stock = stock;
-    }        
+        this.marca = marca;
+        this.categoria = categoria;
+    }     
             
-      public boolean vender(int cantidad) {       
-            
-            
-            
-            }
-            
-        public void reponer(int cantidad) {     
-            
-            
-            
-            
-            
-            
-            
-            
+      public float getPrecio() {
+            return precio;
+}  
+public String getNombre() {
+    return nombre;
+}
+
+public int getStock() {
+    return stock;
+}
+
+public String getMarca() {
+    return marca;
+}
+
+public Categoria getCategoria() {
+    return categoria;
+}
+
+public boolean vender(int cantidad) {
+    
+    
+    return false;
+}
+      
+  public void reponer(int cantidad) {
+   
+}    
+      
+      
+      
 }

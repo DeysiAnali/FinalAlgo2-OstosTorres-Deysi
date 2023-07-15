@@ -4,6 +4,8 @@
  */
 package Modelo;
 
+import java.io.Serializable;
+
 public class Trabajador extends Persona implements Serializable {
       private String password;
       private String email;
@@ -17,7 +19,7 @@ public class Trabajador extends Persona implements Serializable {
       
       public boolean ingresar(String email, String password) { 
       
-      
+        return this.email.equals(email) && this.password.equals(password);
           }
 
     public boolean salir() {
