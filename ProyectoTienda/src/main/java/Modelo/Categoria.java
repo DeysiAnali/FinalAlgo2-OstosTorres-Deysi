@@ -4,10 +4,32 @@
  */
 package Modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Deysi
  */
-public class Categoria {
+public class Categoria implements Serializable {
+      private String nombre;
+    private boolean disponible;
+    
+ public Categoria(String nombre) {
+     
+     
+ }   
+    
+     public boolean habilitar() {
+    
+     }
+    
+     public boolean deshabilitar(Producto[] productos) {
+    
+    
+    }
+    
+    
+    
+    
     
 }
