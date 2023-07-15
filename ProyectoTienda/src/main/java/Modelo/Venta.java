@@ -23,17 +23,39 @@ public class Venta implements Serializable{
         this.estado = estado;
         this.productos = new Producto[0];
     }
+
+    public Venta(float total) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
    public void agregarProducto(Producto producto) {  
-     
+      Producto[] nuevosProductos = new Producto[productos.length + 1];
+        System.arraycopy(productos, 0, nuevosProductos, 0, productos.length);
+        nuevosProductos[productos.length] = producto;
+        productos = nuevosProductos;
      
    }
 
     public boolean eliminarProducto(Producto producto, int cantidad) {   
-     
-     
-     
-     
+      int index = -1;
+        for (int i = 0; i < productos.length; i++) {
+            if (productos[i] == producto) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1) {
+            Producto[] nuevosProductos = new Producto[productos.length - cantidad];
+            int newIndex = 0;
+            for (int i = 0; i < productos.length; i++) {
+                if (i < index || i >= index + cantidad) {
+                    nuevosProductos[newIndex] = productos[i];
+                    newIndex++;
+                }
+            }
+            productos = nuevosProductos;
+            return true;
+        }
       return false;
       }
     
@@ -41,6 +63,8 @@ public class Venta implements Serializable{
         
         return total;
     }
-     
+     public float getTotal() {
+        return total;
+    }
      
 }

@@ -46,13 +46,15 @@ public Categoria getCategoria() {
 }
 
 public boolean vender(int cantidad) {
-    
-    
+    if (stock >= cantidad) {
+        stock -= cantidad;
+        return true;
+    }
     return false;
 }
       
   public void reponer(int cantidad) {
-   
+     stock += cantidad;
 }    
       
       

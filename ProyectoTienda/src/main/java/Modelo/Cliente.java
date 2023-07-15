@@ -17,7 +17,7 @@ public class Cliente extends Persona implements Serializable {
     public Cliente(String nombre, String paterno, String materno, String nacimiento, String numDocumento) {
         super(nombre, paterno, materno, nacimiento, numDocumento);
     }
-   
+
     public boolean pagar() {
        
         return true;
@@ -26,6 +26,14 @@ public class Cliente extends Persona implements Serializable {
     public boolean recargarDinero() {
     
         return true;
+    }
+
+    Object getEmail() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    Object getPassword() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
