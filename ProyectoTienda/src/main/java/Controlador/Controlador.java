@@ -27,8 +27,7 @@ public class Controlador {
     
      public void agregarCliente(String nombre, String paterno, String materno, String nacimiento, String numDocumento,
                                int celular, float dinero) {
-        Cliente cliente = new Cliente(nombre, paterno, materno, nacimiento, numDocumento, celular, dinero);
-        tienda.agregarCliente(cliente);
+       
     }
  public void agregarCategoria(String nombre) {
         Categoria categoria = new Categoria(nombre);
@@ -41,9 +40,7 @@ public class Controlador {
     }
     
     public void agregarVenta(float total, Date fecha, boolean estado, Producto[] productos) {
-    Venta venta = new Venta(total);
-        arregloVenta.agregarVenta(venta);
-        tienda.agregarVenta(venta);
+    
      }
     
       public void eliminarVenta(Venta venta) {
